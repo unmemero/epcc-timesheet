@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/profile.css">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <title>Profile</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <h1>EPCC Timesheet Generator</h1>
+        </a>
+        <nav>            
+            <a href="./profile.html" class="active">Profile info</a>
+            <a href="./index.html">Create my timesheet</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>My Profile</h1>
+
+        <div class="content">
+            <div class="top">
+                <form>
+                    <h2>My info</h2>
+                    <div class="input-container">
+                        <label for="first-name">First Name <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="text" id="first-name" value="John" disabled required autocomplete="given-name">
+                    </div>
+                    <div class="input-container">    
+                        <label for="middle-initial">Middle Initial <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="text" id="middle-initial" value="M" disabled required>
+                    </div>
+                    <div class="input-container">
+                        <label for="last-name">Last Name <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="text" id="last-name" value="Doe" disabled required>
+                    </div>
+                    <div class="input-container">
+                        <label for="epcc-id">EPCC ID <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="number" id="epcc-id" value="88880000" disabled autocomplete="username" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="department">Department <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="text" id="department" value="Student Success" disabled required>
+                    </div>
+                    <div class="input-container">
+                        <label for="position-type">Position type <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <div class="radio-buttons">
+                            <input type="radio" name="position_type" id="part-time" checked="checked" disabled>
+                            <label for="part-time">Part Time</label>
+                            <input type="radio" name="position_type" id="full-time" disabled>
+                            <label for="full-time">Full Time</label>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <h3 class="row-title">Row 1</h3>
+                        <div class="input-container">
+                            <label for="position-number-1">Position No. <span style="color:rgb(255, 106, 106);">*</span></label>
+                            <input type="text" id="position-number-1" value="PT 9990-00" disabled required>
+                        </div>
+                        <div class="input-container">
+                            <label for="fund-1">Fund <span style="color:rgb(255, 106, 106);">*</span></label>
+                            <input type="text" id="fund-1" value="11000" disabled required>
+                        </div>
+                        <div class="input-container">
+                            <label for="org-1">ORG <span style="color:rgb(255, 106, 106);">*</span></label>
+                            <input type="text" id="org-1" value="PT 9990-00" disabled required>
+                        </div>
+                        <div class="input-container">
+                            <label for="acct-1">ACCT <span style="color:rgb(255, 106, 106);">*</span></label>
+                            <input type="text" id="acct-1" value="61631" disabled required>
+                        </div>
+                        <div class="input-container">
+                            <label for="prog-1">PROG<span style="color:rgb(255, 106, 106);">*</span></label>
+                            <input type="text" id="prog-1" value="501" disabled required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h3 class="row-title">Row 2</h3>
+                        <div class="input-container">
+                            <label for="position-number-2">Position No.</label>
+                            <input type="text" id="position-number-2" value="PT 9990-00" disabled>
+                        </div>
+                        <div class="input-container">
+                            <label for="fund-2">Fund</label>
+                            <input type="text" id="fund-2" value="11000" disabled>
+                        </div>
+                        <div class="input-container">
+                            <label for="org-2">ORG</label>
+                            <input type="text" id="org-2" value="PT 9990-00" disabled>
+                        </div>
+                        <div class="input-container">
+                            <label for="acct-2">ACCT</label>
+                            <input type="text" id="acct-2" value="61631" disabled>
+                        </div>
+                        <div class="input-container">
+                            <label for="prog-2">PROG</label>
+                            <input type="text" id="prog-2" value="501" disabled>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="input-container">
+                        <label for="hourly-rate">Hourly Rate <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="number" id="hourly-rate" value="" disabled>
+                    </div>
+                    <div class="input-container">
+                        <label for="office-phone">Office Phone <span style="color:rgb(255, 106, 106);">*</span></label>
+                        <input type="phone" id="office-phone" value="831-2740" disabled required>
+                    </div>
+                    <div class="input-container">
+                        <label for="office-employee-phone">Office Employee Phone</label>
+                        <input type="text" id="office-employee-phone" value="" disabled>
+                    </div>
+                    <button id="editInfoBtn">Edit</button>
+                </form>
+
+                <form>
+                    <h2>My schedule</h2>
+                    <div class="hours-container">
+                        <input type="checkbox" name="sunday" id="sunday-checked" disabled>
+                        <label for="sunday-hours">Sunday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="sunday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="sunday-end" disabled>
+                        </div>
+                    </div>
+                    <div class="hours-container">
+                        <input type="checkbox" name="monday" id="monday-checked" disabled>
+                        <label for="monday-hours">Monday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="monday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="monday-end" disabled>
+                        </div>
+                    </div>
+                    <div class="hours-container">
+                        <input type="checkbox" name="tuesday" id="tuesday-checked" disabled>
+                        <label for="tuesday-hours">Tuesday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="tuesday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="tuesday-end" disabled>
+                        </div>
+                    </div>
+                    <div class="hours-container">
+                        <input type="checkbox" name="wednesday" id="wednesday-checked" disabled>
+                        <label for="wednesday-hours">Wednesday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="wednesday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="wednesday-end" disabled>
+                        </div>
+                    </div>
+                    <div class="hours-container">
+                        <input type="checkbox" name="thursday" id="thursday-checked" disabled>
+                        <label for="Thursday-hours">Thursday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="thursday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="thursday-end" disabled>
+                        </div>
+                    </div>
+                    <div class="hours-container">
+                        <input type="checkbox" name="friday" id="friday-checked" disabled>
+                        <label for="friday-hours">Friday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="friday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="friday-end" disabled>
+                        </div>
+                    </div>
+                    <div class="hours-container">
+                        <input type="checkbox" name="saturday" id="saturday-checked" disabled>
+                        <label for="saturday-hours">Saturday</label>
+                        <div class="times">
+                            <input type="time" name="start-time" id="saturday-start" disabled>
+                            -
+                            <input type="time" name="end-time" id="saturday-end" disabled>
+                        </div>
+                    </div>
+                    <p class="totals">Total Weekly Hours <span id="total-hours">19.0</span></p>
+                    <button>Update schedule</button>
+                    <h3>Upcoming holidays</h3>
+                    <table>
+                        <tbody>
+                            <th>Example</th>
+                            <th>Day</th>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="bottom">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>April 2025</td>
+                            <td>Print</td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+    <script src="./scripts/profile.js"></script>
+</body>
+</html>

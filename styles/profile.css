@@ -1,0 +1,88 @@
+main {
+  display: flex;
+  gap: 20px;
+}
+main .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .content .top {
+  display: flex;
+  gap: 40px;
+}
+main .content .top form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 25px;
+  border-radius: 25px;
+  background: radial-gradient(rgba(58, 171, 236, 0.801), rgba(5, 79, 121, 0.411));
+  justify-content: center;
+  align-items: center;
+}
+main .content .top form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+main .content .top form .input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .content .top form .input-container .radio-buttons {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+main .content .top form .input-container input {
+  padding: 5px;
+  border-radius: 10px;
+}
+main .content .top form .hours-container {
+  display: grid;
+  grid-template-columns: 0.3fr 0.6fr 1fr;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 10px;
+}
+main .content .top form .hours-container input[type=checkbox] {
+  accent-color: purple;
+}
+main .content .top form .hours-container input[type=time] {
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+main .content .top form hr {
+  margin: 5px 0px;
+}
+main .content .top form .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+main .content .top form .row h3 {
+  text-align: center;
+  padding: 0px 10px 0px 0px;
+}
+main .content .top form button {
+  min-width: 70px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  border: white solid 1px;
+  background: radial-gradient(rgb(114, 19, 114), rgb(146, 20, 146));
+  transition: 0.2s ease-in;
+}
+main .content .top form button:hover {
+  background: radial-gradient(rgb(146, 20, 146), rgb(114, 19, 114));
+  box-shadow: 5px -5px white;
+}
+main .bottom {
+  width: 100%;
+}/*# sourceMappingURL=profile.css.map */
